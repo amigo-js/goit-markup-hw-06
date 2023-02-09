@@ -376,8 +376,14 @@ img {
 .modal-form--terms-caption {
 }
 .modal-form-terms {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
 }
 .modal-form-checkbox {
+
+
 }
 .modal-form-privacy-policy {
 }
