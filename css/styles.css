@@ -350,12 +350,13 @@ img {
 }
 
 .modal-form-comment-label {
-  display: block;
+  /* display: block; */
   font-size: 12px;
   line-height: 14px;
   /* identical to box height */
   letter-spacing: 0.01em;
   color: #8e8f99;
+  position: relative;
 }
 .modal-form-comment-input {
   display: block;
@@ -364,6 +365,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-top: 4px;
+  outline: none;
 }
 
 .modal-form-comment-input::placeholder {
