@@ -303,8 +303,9 @@ img {
 /*  ------------------- Modal Form ---------------------- */
 
 .modal-form {
+  display: flex;
+  flex-direction: column;
 }
-
 .modal-form-title {
   font-weight: 500;
   font-size: 16px;
@@ -314,7 +315,6 @@ img {
   color: #2e2f42;
   margin-bottom: 16px;
 }
-
 .modal-form-label {
   display: block;
   font-size: 12px;
@@ -323,15 +323,12 @@ img {
   color: #8e8f99;
   position: relative;
 }
-
-.modal-form-icon-caption {
-  align-items: center;
-  margin-top: 4px;
+.label-name {
 }
-
+.modal-input-wrapper {
+  position: relative;
+}
 .modal-form-input {
-  /* display: block; */
-  /* box-sizing: border-box; */
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -340,13 +337,31 @@ img {
   padding-left: 40px;
   margin-bottom: 8px;
   outline: none;
+  margin-top: 4px;
+
+  /* padding-left: 38px;
+  padding-top: 8px;
+  padding-bottom: 8px; */
+  transition: border-color var(--transition-func);
+}
+
+.modal-form-input:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-form-icon {
   position: absolute;
   top: 50%;
   left: 16px;
-  /* display: flex; */
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: var(--main-dark-color);
+  transition: fill var(--transition-func);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: #4d5ae5;
 }
 
 .modal-form-comment-label {
@@ -358,14 +373,28 @@ img {
   color: #8e8f99;
   position: relative;
 }
-.modal-form-comment-input {
+.comment-label {
   display: block;
-  width: 100%;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+  margin-bottom: 4px;
+}
+.modal-form-comment-input {
+  width: 360px;
   height: 120px;
+  resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-top: 4px;
+  padding: 8px 16px;
   outline: none;
+  transition: border-color var(--transition-func);
+  margin-bottom: 16px;
+}
+
+.modal-form-comment-input:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-form-comment-input::placeholder {
@@ -373,26 +402,68 @@ img {
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: rgba(117, 117, 117, 0.5);
-  padding-top: 8px;
-  padding-left: 16px;
+  /* padding-top: 8px;
+  padding-left: 16px; */
 }
 
-.modal-form--terms-caption {
-}
-.modal-form-terms {
+/* .label-checkbox {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+} */
+
+.label-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: center;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
 }
-.modal-form-checkbox {
-}
-.modal-form-privacy-policy {
+
+.label-checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../images/checkbox-vector.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 10px 8px;
+  height: 16px;
+  width: 16px;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+  transition: background-color var(--transition-func);
 }
 
-.modal-form-btn {
+.modal-checkbox:focus + .label-checkbox::before {
+  border: 1.25px solid #404bbf;
+}
+.modal-checkbox:checked + .label-checkbox::before {
+  border: 1.25px solid #404bbf;
+  background-color: #404bbf;
 }
 
+.modal-submit-btn {
+  padding: 16px 32px;
+  background: #4d5ae5;
+  border-color: #4d5ae5;
+  border-radius: 4px;
+  color: #ffffff;
+  min-width: 169px;
+  text-align: center;
+  align-self: center;
+  transition: background-color var(--transition-func),
+    box-shadow var(--transition-func);
+  margin-top: 24px;
+}
+.modal-submit-btn:is(:hover, :focus) {
+  background-color: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 /* ------------------- ATTITUDES --------------------- section */
 
 .attitudes {
