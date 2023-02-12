@@ -286,14 +286,17 @@ img {
   align-items: center;
   transition: background-color var(--transition-func);
 }
+
 .btn-modal-close:hover,
 .btn-modal-close:focus {
   background-color: var(--focus-and-hover-color);
 }
+
 .btn-modal-close:hover .modal-icon-close,
 .btn-modal-close:focus .modal-icon-close {
   fill: #fff;
 }
+
 .modal-icon-close {
   height: 8px;
   width: 8px;
@@ -306,6 +309,7 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 .modal-form-title {
   font-weight: 500;
   font-size: 16px;
@@ -315,6 +319,7 @@ img {
   color: #2e2f42;
   margin-bottom: 16px;
 }
+
 .modal-form-label {
   display: block;
   font-size: 12px;
@@ -324,12 +329,15 @@ img {
   position: relative;
   margin-bottom: 8px;
 }
+
 .label-name {
 }
+
 .modal-input-wrapper {
   position: relative;
   display: block;
 }
+
 .modal-form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -337,13 +345,8 @@ img {
   width: 100%;
   outline: none;
   padding-left: 40px;
-
   outline: none;
   margin-top: 4px;
-
-  /* padding-left: 38px;
-  padding-top: 8px;
-  padding-bottom: 8px; */
   transition: border-color var(--transition-func);
 }
 
@@ -365,14 +368,13 @@ img {
 }
 
 .modal-form-comment-label {
-  /* display: block; */
   font-size: 12px;
   line-height: 14px;
-  /* identical to box height */
   letter-spacing: 0.01em;
   color: #8e8f99;
   position: relative;
 }
+
 .comment-label {
   display: block;
   font-size: 12px;
@@ -381,6 +383,7 @@ img {
   color: var(--subtle-text);
   margin-bottom: 4px;
 }
+
 .modal-form-comment-input {
   width: 360px;
   height: 120px;
@@ -402,16 +405,7 @@ img {
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: rgba(117, 117, 117, 0.5);
-  /* padding-top: 8px;
-  padding-left: 16px; */
 }
-
-/* .label-checkbox {
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #757575;
-} */
 
 .label-checkbox {
   position: relative;
@@ -428,10 +422,6 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  /* background-image: url(../images/checkbox-vector.svg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 10px 8px; */
   height: 16px;
   width: 16px;
   border: 1.25px solid #2e2f42;
@@ -442,6 +432,7 @@ img {
 .modal-checkbox:focus + .label-checkbox::before {
   border: 1.25px solid #404bbf;
 }
+
 .modal-checkbox:checked + .label-checkbox::before {
   border: 1.25px solid #404bbf;
   background-color: #404bbf;
@@ -463,10 +454,12 @@ img {
     box-shadow var(--transition-func);
   margin-top: 24px;
 }
+
 .modal-submit-btn:is(:hover, :focus) {
   background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+
 /* ------------------- ATTITUDES --------------------- section */
 
 .attitudes {
@@ -632,9 +625,6 @@ img {
 /* ----------------------- CUSTOMERS ------------------- section */
 
 .customers {
-  /* padding: 130px 0 120px 0; */
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
   padding: 120px 0;
 }
 
@@ -650,7 +640,6 @@ img {
 
 .customers-icon-item {
   box-sizing: border-box;
-
   margin-right: 24px;
 }
 
@@ -783,8 +772,7 @@ img {
 .subscribe-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
@@ -803,14 +791,12 @@ img {
   height: 40px;
   width: 264px;
   color: #ffffff;
-
   margin-right: 24px;
 }
 
 .subscribe-item::placeholder {
   font-size: 12px;
-  line-height: 24px;
-  /* identical to box height, or 200% */
+  line-height: 2;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -821,8 +807,7 @@ img {
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
-  /* identical to box height, or 150% */
+  line-height: 1.5;
   gap: 16px;
   display: flex;
   align-items: center;
